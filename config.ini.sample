@@ -1,0 +1,20 @@
+[settings]
+telegram_bot_token=your_token
+telegram_channel_id=your_channel_id
+
+[https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5]
+regex=body
+check_period=3600
+
+
+
+[https://www.gigabyte.com/Motherboard/GA-AB350N-Gaming-WIFI-rev-10#support-dl-bios]
+regex=div.div-table-row.div-table-body-BIOS > div.div-table-cell.download-version
+check_period=86400
+
+
+[https://www.samsung.com/ua_ru/support/model/UE50KU6000UXUA/]
+regex=div.manual-download-filter-new__module.download > div.manual-download-filter-new__content > div.manual-download-filter-new__content-list > ul > li.is-show > div.manual-download-filter-new__content-info > span.manual-download-filter-new__content-desc.di-desc > span.s-version
+check_period=86400
+
+
