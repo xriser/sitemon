@@ -14,10 +14,6 @@ from requests_html import HTMLSession
 from bs4 import BeautifulSoup  # Or from BeautifulSoup import BeautifulSoup
 
 
-#notifier
-#turl = 'https://api.telegram.org/bot563628596:AAHWIuaLsNbQCDBdEgmq_j7XsBUHH3ouqe8/sendMessage?chat_id=-1001237195737&text='
-
-
 logfile = 'sitewatcher.log'
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -25,7 +21,7 @@ config = configparser.ConfigParser()
 config.read(dir_path + "/" + 'config.ini', encoding="utf8")
 sections = config.sections()
 
-
+#notifier
 turl = 'https://api.telegram.org/bot' + config['settings']['telegram_bot_token'] + '/sendMessage?chat_id=' + config['settings']['telegram_channel_id'] +'&text='
 
 
