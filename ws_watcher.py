@@ -30,8 +30,10 @@ def get_data(url,regex):
     session = HTMLSession()
     r = session.get(url)
     r.html.render()
-
-    text = r.html.find(regex, first=True).text
+    try:
+        text = r.html.find(regex, first=True).text
+    except AttributeError:
+        text = ''
 
     print(text)
     print(regex)
@@ -133,4 +135,3 @@ for key in sections:
                       + logfile, 'w') as configfile:
                 log.write(codecs.open(dir_path + "/" + logfile, 'wb+', 'utf-8'))
                 #log.write(configfile)
-
